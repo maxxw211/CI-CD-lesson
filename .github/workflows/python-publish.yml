@@ -1,10 +1,4 @@
 # This workflow will upload a Python Package using Twine when a release is created
-# For more information see: https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions#publishing-to-package-registries
-
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
 
 name: Python application
 
@@ -42,7 +36,7 @@ jobs:
     - name: testing google servive cloud server ssh connection
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.DEPLOY_SERVER_HOST }}
+        host: ${{ secrets.HOST }}
         username: ${{ secrets.USER_NAME }}
         key: ${{ secrets.SSH_KEYS }}
         script: |
